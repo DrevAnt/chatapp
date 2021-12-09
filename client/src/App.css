@@ -1,9 +1,9 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: #fff;
+  background: #d1d1d1;
   color: #212121;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   display: grid;
   place-items: center;
 }
@@ -11,7 +11,7 @@ body {
   margin: 0%;
   padding: 0%;
 }
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 .joinChatContainer {
   display: flex;
@@ -27,7 +27,7 @@ body {
   width: 210px;
   height: 40px;
   margin: 7px;
-  border: 2px solid #43a047;
+  border: 2px solid #686868;
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
@@ -41,36 +41,42 @@ body {
   border-radius: 5px;
   padding: 5px;
   font-size: 16px;
-  background: #43a047;
+  background: #686868;
   color: #fff;
   cursor: pointer;
 }
 
 .joinChatContainer button:hover {
-  background: #2e7d32;
+  background: #838383;
 }
 
 .chat-window {
-  width: 300px;
-  height: 420px;
+  width: 18.7rem;
+  height: 26.2rem;
+  margin: 0 auto;
 }
 
 .chat-window p {
   margin: 0;
 }
 .chat-window .chat-header {
-  height: 45px;
-  border-radius: 6px;
+  height: auto;
   background: #263238;
   position: relative;
-  cursor: pointer;
 }
 .chat-window .chat-header p {
   display: block;
-  padding: 0 1em 0 2em;
+  padding: 0 1em 0 1.5em;
   color: #fff;
   font-weight: 700;
   line-height: 45px;
+}
+
+.chat-subtitle {
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 0 1em 0.5em 2.5em;
 }
 
 .chat-window .chat-body {
@@ -101,7 +107,7 @@ body {
   height: auto;
   min-height: 40px;
   max-width: 120px;
-  background-color: #43a047;
+  background-color: #8d8d8d;
   border-radius: 5px;
   color: white;
   display: flex;
@@ -133,7 +139,7 @@ body {
 
 #other .message-content {
   justify-content: flex-end;
-  background-color: cornflowerblue;
+  background-color: rgb(69, 79, 99);
 }
 
 #other .message-meta {
@@ -167,7 +173,7 @@ body {
   border-right: 1px dotted #607d8b;
 
   outline: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .chat-window .chat-footer button {
@@ -180,11 +186,11 @@ body {
   background: transparent;
   outline: none;
   font-size: 25px;
-  color: lightgray;
+  color: #263238;
 }
 
 .chat-window .chat-footer button:hover {
-  color: #43a047;
+  color: #6389b4;
 }
 .hide {
   opacity: 0 !important;
