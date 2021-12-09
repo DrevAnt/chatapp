@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import { v4 as uuidv4 } from "uuid";
 
 function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
@@ -11,6 +12,7 @@ function Chat({ socket, username, room }) {
         room: room,
         author: username,
         message: currentMessage,
+        id: uuidv4(),
         time:
           new Date(Date.now()).getHours() +
           ":" +
@@ -39,7 +41,11 @@ function Chat({ socket, username, room }) {
         <ScrollToBottom className="message-container">
           {messageList.map((messageContent) => {
             return (
-              <div className="message">
+              <div
+                key={messageContent.id}
+                className="message"
+                id={username === messageContent.author ? "you" : "other"}
+              >
                 <div>
                   <div className="message-content">
                     <p>{messageContent.message}</p>
